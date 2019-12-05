@@ -5,9 +5,10 @@ class Node
 {
   public:
     Node();
-    Node(T value, Node<T>* nextNode);
+    Node( T value, Node<T>* prevNode, Node<T>* nextNode );
     T data;            
     Node<T>* next;
+    Node<T>* prev;
 };
 
 template<typename T>

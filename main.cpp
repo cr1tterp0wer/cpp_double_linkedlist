@@ -4,7 +4,7 @@
 #include "LinkedList.h"
 //
 // CHRISTOPHER APODACA
-// Single Linked List Full Implementation Test
+// Doubly Linked List Full Implementation Test
 //
 
 using std::endl;
@@ -17,37 +17,17 @@ using std::string;
 //
 const int TEST_LENGTH = 5;
 
-void testSearch(){
-
-  LinkedList<string> mylist; 
-  mylist.listAppend("Devil");
-  mylist.listAppend("Satan");
-  mylist.listAppend("Lucifer");
-  mylist.listAppend("Azmodius");
-  mylist.listAppend("Abadon");
-
-  assert( mylist.search("Devil") == mylist.getHead() );//TERMINATE IF FAIL
-  cout << "TestSearch(): PASSED - ( Devil == " << mylist.getHead()->data << " )"<<endl;
-}
-
-void testGetLength(){
-
-  LinkedList<string> mylist; 
-  mylist.listAppend("Devil");
-  mylist.listAppend("Satan");
-  mylist.listAppend("Lucifer");
-  mylist.listAppend("Azmodius");
-  mylist.listAppend("Abadon");
-
-  int len = mylist.getLength();
-  assert( len == TEST_LENGTH ); //TERMINATE IF FAIL
-  cout << "TestGetLength(): PASSED - ( 5 == "<< len << " )" << endl;
-}
-
 int main(){
-  testSearch();
-  testGetLength();
 
+  LinkedList<int> mylist; 
+  mylist.listAppend(1);
+  mylist.listAppend(2);
+  mylist.listAppend(3);
+  mylist.listAppend(4);
+  mylist.listAppend(5);
+  mylist.listAppend(6);
+
+  mylist.printList();
   return 0;
 }
 
